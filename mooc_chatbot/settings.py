@@ -107,7 +107,7 @@ CHANNEL_LAYERS = {
         'CONFIG': {
             'hosts': [('localhost', 6379)],
         },
-        'ROUTING': 'example_channels.routing.channel_routing',
+        'ROUTING': 'mooc_chatbot.routing.channel_routing',
     }
 }
 

@@ -1,5 +1,5 @@
 from channels.routing import route
-from example.members import ws_connect, ws_disconnect
+from bot.members import ws_connect, ws_disconnect
 
 
 channel_routing = [
