@@ -8,10 +8,18 @@
 
     socket.onopen = function open() {
       console.log('WebSockets connection created.');
+      socket.onmessage =    function (evt) 
+               { 
+                  var received_msg = evt.data;
+                  console.log(received_msg)
+               };
+      socket.send('fdsfdsfds');
     };
-
-    if (socket.readyState == WebSocket.OPEN) {
-      socket.onopen();
-    }
+    // console.log(socket.readyState);
+    // console.log(WebSocket.OPEN);
+    // if (socket.readyState == WebSocket.OPEN) {
+    //   console.log('opennnn');      
+    //   socket.onopen();      
+    // }  	
   </script>
 {% endblock script %}
