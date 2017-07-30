@@ -1,0 +1,30 @@
+<script>
+	var topic_id = '{{topic_id}}';
+	var getMessageHTML = function (side, text){
+		return '<li class="message '+side+' appeared"><div class="avatar"></div><div class="text_wrapper"><div class="text">'+text+'</div></div></li>';
+	};
+	$("#chat_window").hide();
+	var socket = new WebSocket('ws://' + window.location.host + '/users/');
+	var sendMessage = function (){
+		var text = $(".message_input").val();
+		if (text != ''){
+			socket.send(JSON.stringify({'text':text, 'topic_id':topic_id}));
+		}
+		$(".messages").append(getMessageHTML('left', text))
+	};
+	socket.onopen = function open() {
+		console.log('WebSockets connection created.');
+		$("#chat_window").show();
+		socket.onmessage = function (evt) 
+		{ 
+			var received_msg = evt.data;
+			$(".messages").append(getMessageHTML('right', received_msg))
+		};
+		$(".send_message").on('click',sendMessage);
+		$(".message_input").on('keyup', function (e) {
+			if (e.keyCode == 13) {
+				sendMessage();
+			}
+		});
+	}; 	
+</script>

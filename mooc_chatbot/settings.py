@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bot',
+    'mooc',
     'channels'
 ]
 
@@ -100,6 +101,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+BIDIRECTIONAL_API_LINK = 'http://35.165.153.16:1995/submit'
+
+DEVELOPMENT_PROXY = { 
+              "http"  : "http://proxy22.iitd.ac.in:3128", 
+              "https" : "https://proxy22.iitd.ac.in:3128"              
+            }
 
 CHANNEL_LAYERS = {
     'default': {

@@ -1,5 +1,5 @@
 from channels.routing import route
-from bot.members import *
+from bot.action import *
 
 
 channel_routing = [
