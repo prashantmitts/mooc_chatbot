@@ -6,14 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
   {% block styles %}{% endblock styles %}
+  <style type="text/css">
+    .description {
+      width: 100%;
+      padding: 10px 20px 10px 20px;
+    }
+  </style>
   <title>Example Channels</title>
 </head>
 <body>
-  <div class="container">
-    <br>
+{% include 'mooc/navbar.html' %} 
+
+  
     {% block content %}{% endblock content %}
-  </div>
+
   <script src="../../static/js/jquery.min.js"></script>
+  <script src="../../static/js/bootstrap.min.js"></script>
   {% block script %}{% endblock script %}
 </body>
 </html>
