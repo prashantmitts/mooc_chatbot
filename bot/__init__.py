@@ -1,1 +1,0 @@
-from intelligence import Intelligence
