@@ -20,7 +20,7 @@ def ws_send(user_query):
     topic_id = content['topic_id']
     topic_content = Topic.objects.get(id=topic_id).content
     # print(query_text)
-    # print(topic_content)
+    print(topic_content)
     result = requests.get(BIDIRECTIONAL_API_LINK, params={'paragraph': topic_content, 'question':query_text}, proxies=DEVELOPMENT_PROXY)    
      # apply intelligence here to generate 'response'
     print(result.text)

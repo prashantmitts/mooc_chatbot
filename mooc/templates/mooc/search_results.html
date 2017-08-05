@@ -6,15 +6,20 @@
 {% block content %}
 
 <div class="container">
-{% for topic in results %}
-	<div class="card" style="width: 20rem;">
-  <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-  <div class="card-block">
-    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-    <a href="topic?id={{topic.id}}" class="btn btn-primary"><h4 class="card-title">{{topic.title}}</h4></a>
-  </div>
+<h1>Search Results:</h1>
+
+	{% for topic in results %}
+<div  style="width: 40%; border: 1px solid black ; border-radius: 10px;height:auto; overflow:auto; padding: 4px; background: #CCCC99">
+    <div class="col-md-10">
+    	<h4 >{{topic.title}}</h4>
+    </div>
+    <div class="col-md-2">
+    <a href="topic?id={{topic.id}}" class="btn btn-primary">View</a>
+    </div>
+  
 </div>
 {% endfor%}	
+
 </div>
 {% endblock content %}
 {% block script %}

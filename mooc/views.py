@@ -12,10 +12,11 @@ def search(request):
     return render(request, 'mooc/search_results.html', context={'results': search_results})
 
 def topic(request):
-    topic_id = 1
+    topic_id=request.GET.get('id')
     topic = Topic.objects.filter(id=topic_id).first()
     if topic:
         topic_content = topic.content
     else:
         topic_content =None
+    print(topic_content)
     return render(request, 'mooc/topic.html',context={'topic_id':topic_id, 'content': topic_content})
