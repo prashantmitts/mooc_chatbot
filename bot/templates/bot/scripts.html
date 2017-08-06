@@ -35,13 +35,13 @@
 			}
 		});
 	};
-	$(".button.closee").hover(function(){
+	$(".button.closee").on('mouseenter',function(){
 		addMessage('right', 'Click this to close.')
 	});
-	$(".button.minimize").hover(function(){
+	$(".button.minimize").on('mouseenter',function(){
 		addMessage('right', 'Click this to minimize.')
 	});
-	$(".button.maximize").hover(function(){
+	$(".button.maximize").on('mouseenter',function(){
 		addMessage('right', 'Click this to maximize.')
 	});
 	$(".button.closee").on('click', function(){
