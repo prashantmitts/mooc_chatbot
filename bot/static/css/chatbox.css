@@ -39,8 +39,25 @@ body {
   margin-right: 10px;
   position: relative;
 }
-.top_menu .buttons .button.close {
-  background-color: #f5886e;
+/*.top_menu .buttons .button .tooltiptext {
+    visibility: hidden;
+    width: 70px;
+    color: #fff;
+    background-color: grey;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+
+    
+    position: absolute;
+    z-index: 1;
+}*/
+
+.top_menu .buttons .button:hover {
+    cursor:pointer;
+}
+.top_menu .buttons .button.closee {
+  background-color: #f93a0d;
 }
 .top_menu .buttons .button.minimize {
   background-color: #fdbf68;
