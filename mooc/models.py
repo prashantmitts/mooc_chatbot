@@ -6,4 +6,4 @@ from django.db import models
 class Topic(models.Model):
     content = models.CharField(max_length=10000)
     title = models.CharField(max_length=40, default='Title')
-    video_dir = models.FileField(upload_to='videos/', default="video")
+    video = models.FileField(upload_to='videos/', default="video")

@@ -32,10 +32,9 @@
 	{% include 'bot/chatbox.html' %}
 </div>
 
-<video width="320" height="240" controls>
-<source src="{{ STATIC_URL }}""videos/video.mp4" type="video/mp4">
+<video width="320" height="240" controls autoplay>
+<source src="{% static video %}" type="video/mp4">
 </video>
-
 
 {% endblock content %}
 {% block script %}

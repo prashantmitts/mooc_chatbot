@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from mooc.models import Topic
-from mooc_chatbot.settings import MEDIA_ROOT
 
 # Create your views here.
 
@@ -25,4 +24,5 @@ def topic(request):
         topic_content = topic.content
     else:
         topic_content =None
-    return render(request, 'mooc/topic.html', context={'topic_id': topic_id, 'topic': topic, 'content': topic_content, 'video': MEDIA_ROOT+"/"+str(topic.video_dir)})
+    video_d = str(topic.video)
+    return render(request, 'mooc/topic.html', context={'topic_id': topic_id, 'topic': topic, 'content': topic_content, 'video': video_d})
