@@ -59,7 +59,7 @@ body {
 .messages {
   position: relative;
   list-style: none;
-  padding: 5% 2% 0 2%;
+  padding: 5% 2% 2% 2%;
   margin: 0;
   height: calc(74%);
   overflow: scroll;
@@ -115,8 +115,7 @@ body {
   display: inline-block;
   padding: 2%;
   border-radius: 6px;
-  width: calc(85%);
-  min-width: 100px;
+  width: auto;
   position: relative;
 }
 .messages .message .text_wrapper::after, .messages .message .text_wrapper::before {
@@ -128,14 +127,7 @@ body {
   position: absolute;
   pointer-events: none;
 }
-.messages .message .text_wrapper::after {
-  border-width: 13px;
-  margin-top: 0px;
-}
-.messages .message .text_wrapper::before {
-  border-width: 15px;
-  margin-top: -2px;
-}
+
 .messages .message .text_wrapper .text {
   /*font-size: 16px; */
   font-size: 2.5vh;
