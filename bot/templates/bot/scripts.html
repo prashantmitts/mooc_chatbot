@@ -7,10 +7,13 @@
 	var socket = new WebSocket('ws://' + window.location.host + '/users/');
 	var addMessage = function(side, content){
 		$(".messages").append(getMessageHTML(side, content))
-		$(".messages").scrollTop($(".messages").children().height());
+		// $(".messages").scrollTop($(".messages").children().height());
+		$(".messages").stop().animate({ scrollTop: $(".messages")[0].scrollHeight}, 1000);
+
 	};
 	var sendMessage = function (){
 		var text = $(".message_input").val();
+		$(".message_input").val('');
 		if (text != ''){
 			socket.send(JSON.stringify({'text':text, 'topic_id':topic_id}));
 		}
