@@ -5,23 +5,28 @@
 	};
 	$("#chat_window").hide();
 	var socket = new WebSocket('ws://' + window.location.host + '/users/');
+	var addMessage = function(side, content){
+		$(".messages").append(getMessageHTML(side, content))
+		// $(".messages").scrollTop($(".messages").children().height());
+		$(".messages").stop().animate({ scrollTop: $(".messages")[0].scrollHeight}, 1000);
+
+	};
 	var sendMessage = function (){
 		var text = $(".message_input").val();
+		$(".message_input").val('');
 		if (text != ''){
 			socket.send(JSON.stringify({'text':text, 'topic_id':topic_id}));
 		}
-		$(".messages").append(getMessageHTML('left', text))
-		$(".messages").scrollTop($(".messages").children().height());
-
+		addMessage('left',text)
 	};
+	
+
 	socket.onopen = function open() {
 		console.log('WebSockets connection created.');
 		$("#chat_window").show();
 		socket.onmessage = function (evt) 
-		{ 
-			var received_msg = evt.data;
-			$(".messages").append(getMessageHTML('right', received_msg))
-			$(".messages").scrollTop($(".messages").children().height());
+		{ 		
+			addMessage('right', evt.data)
 		};
 		$(".send_message").on('click',sendMessage);
 		$(".message_input").on('keyup', function (e) {
@@ -29,5 +34,26 @@
 				sendMessage();
 			}
 		});
-	}; 	
+	};
+	$(".button.closee").hover(function(){
+		addMessage('right', 'Click this to close.')
+	});
+	$(".button.minimize").hover(function(){
+		addMessage('right', 'Click this to minimize.')
+	});
+	$(".button.maximize").hover(function(){
+		addMessage('right', 'Click this to maximize.')
+	});
+	$(".button.closee").on('click', function(){
+		$("#chat_window").hide();
+	});
+	var messages, bottom_wrapper;
+	$(".button.maximize").on('click', function(){
+		messages.appendTo("#chat_window");
+		bottom_wrapper.appendTo("#chat_window");		
+	});
+	$(".button.minimize").on('click', function(){
+		messages = $(".messages").detach();
+		bottom_wrapper = $(".bottom_wrapper").detach();
+	});
 </script>

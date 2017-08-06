@@ -8,17 +8,15 @@ body {
 }
 
 .chat_window {
-  position: absolute;
+  position: relative;
   width: calc(100%);
   height: calc(100%);
   border-radius: 10px;
   background-color: #fff;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  right: 0!important;
+  bottom: 0!important;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   background-color: #f8f8f8;
-  overflow: hidden;
 }
 
 .top_menu {
@@ -39,8 +37,12 @@ body {
   margin-right: 10px;
   position: relative;
 }
-.top_menu .buttons .button.close {
-  background-color: #f5886e;
+
+.top_menu .buttons .button:hover {
+    cursor:pointer;
+}
+.top_menu .buttons .button.closee {
+  background-color: #f93a0d;
 }
 .top_menu .buttons .button.minimize {
   background-color: #fdbf68;
@@ -59,7 +61,7 @@ body {
   list-style: none;
   padding: 5% 2% 0 2%;
   margin: 0;
-  height: calc(90%);
+  height: calc(74%);
   overflow: scroll;
 }
 .messages .message {
@@ -140,13 +142,12 @@ body {
   font-weight: 300;
 }
 
-.bottom_wrapper {
-  position: relative;
+.bottom_wrapper {  
   width: 100%;
   height: 15%;
   background-color: #fff;
   padding: 1% 1%;
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
 .bottom_wrapper .message_input_wrapper {
