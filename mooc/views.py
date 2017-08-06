@@ -14,9 +14,8 @@ def search(request):
 def topic(request):
     topic_id=request.GET.get('id')
     topic = Topic.objects.filter(id=topic_id).first()
-    if topic:
-        topic_content = topic.content
-    else:
-        topic_content =None
-    print(topic_content)
-    return render(request, 'mooc/topic.html',context={'topic_id':topic_id, 'content': topic_content})
+    # if topic:
+    #     topic_content = topic.content
+    # else:
+    #     topic_content =None    
+    return render(request, 'mooc/topic.html',context={'topic_id':topic_id, 'topic': topic})
