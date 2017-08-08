@@ -1,5 +1,7 @@
 {% extends 'mooc/_base.html' %}
 {% block styles %}
+{% load staticfiles %}
+
 <style type="text/css">
 	#chatbox {
 		width: 380px;
@@ -29,6 +31,11 @@
 <div id="chatbox">
 	{% include 'bot/chatbox.html' %}
 </div>
+
+<video width="320" height="240" controls autoplay>
+<source src="{% static video %}" type="video/mp4">
+</video>
+
 {% endblock content %}
 {% block script %}
 {% include 'bot/scripts.html' %}
