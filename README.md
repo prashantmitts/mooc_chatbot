@@ -19,7 +19,7 @@ run this in a separate terminal
 
 # Misc.
 ---
-# If at some point you need to remove redis cache
+#### If at some point you need to remove redis cache
 ```
   redis-cli
   flushall
