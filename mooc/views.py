@@ -26,4 +26,6 @@ def topic(request):
     else:
         topic_content =None
     video_d = str(topic.video)
+    if video_d == 'video':
+        video_d =None
     return render(request, 'mooc/topic.html', context={'topic_id': topic_id, 'topic': topic, 'content': topic_content, 'video': video_d})

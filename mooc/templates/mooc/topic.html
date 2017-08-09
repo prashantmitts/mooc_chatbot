@@ -22,7 +22,8 @@
 {% endblock styles %}
 
 {% block content %}
-<div class="description">
+<div class="container">
+	<div class="description">
 	<h2>{{topic.title}}</h2>
 </div> 
 <div class="container">
@@ -31,11 +32,14 @@
 <div id="chatbox">
 	{% include 'bot/chatbox.html' %}
 </div>
-
-<video width="320" height="240" controls autoplay>
+{% if video %}
+<div align="left" >
+<video class="embed-responsive-item" width="320" height="240" controls autoplay>
 <source src="{% static video %}" type="video/mp4">
 </video>
-
+</div>
+{% endif %}
+</div>
 {% endblock content %}
 {% block script %}
 {% include 'bot/scripts.html' %}
