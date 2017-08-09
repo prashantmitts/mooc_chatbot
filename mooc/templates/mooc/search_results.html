@@ -2,23 +2,38 @@
 {% block styles %}
 
 {% endblock styles %}
-
+<style type="text/css">
+	.search-results {
+		width: 60vw; 
+		border: 1px dashed #696969 ; 
+		border-radius: 10px;
+		min-height: 60vh;
+		height:auto; 
+		overflow:auto; 
+		padding: 10px; 
+		background: #F8F8FF
+	}
+</style>
 {% block content %}
 
 <div class="container">
-<h1>Search Results:</h1>
+	<h1>Search Results:</h1>
 
+	{% if results %}
 	{% for topic in results %}
-<div  style="width: 40%; border: 1px solid black ; border-radius: 10px;height:auto; overflow:auto; padding: 4px; background: #CCCC99">
-    <div class="col-md-10">
-    	<h4 >{{topic.title}}</h4>
-    </div>
-    <div class="col-md-2">
-    <a href="topic?id={{topic.id}}" class="btn btn-primary">View</a>
-    </div>
-  
-</div>
-{% endfor%}	
+	<div  class="search-results">
+		<div class="col-md-10">
+			<h4 >{{topic.title}}</h4>
+		</div>
+		<div class="col-md-2">
+			<a href="topic?id={{topic.id}}" class="btn btn-primary">View</a>
+		</div>
+		<hr>
+	</div>
+	{% endfor%}	
+	{% else %}
+	<h3>Your query matched 0 entries in our database. Try searching something else !</h3>
+	{% endif%}
 
 </div>
 {% endblock content %}

@@ -11,6 +11,7 @@ def home(request):
 
 def search(request):
     print('search')
+    search_results = None
     if request.GET and request.GET.get('query'):
         search_results = Topic.objects.filter(
             title__icontains=request.GET.get('query'))
