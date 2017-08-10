@@ -3,8 +3,7 @@ This Project is Demo Project for our Idea on Applications of Artificial Intellig
 
 ### 1.1 Techincal Aspects
 ---
-Here We have tried to use the Q&A which has been developed by Allen AI
-which is based on Bi-Att-Flow.
+Here We have tried to use the Q&A which has been developed by Allen AI which is based on Bi-directional Attention Flow
 ### 1.2 Video Demo
 ---
 We have posted the live video demo on youtube! get the access here
@@ -19,13 +18,12 @@ https://youtube.com/blah-blah
   pip3 install -r requirements.txt
 ```
 
-### 2.2 Runing the project
+### 2.2 Runing the project locally
 ---
-run this in a separate terminal
 ```
   redis-server & ; python manage.py runserver
 ```
-
+Noe visit :- http://localhost:8000
 ### 2.3 Misc.
 ---
 ###### 2.3.1 If at some point you need to remove redis cache
@@ -36,3 +34,6 @@ run this in a separate terminal
 
 # 3 Future Endeavours
 If we get a chance and more importantly time to improve the Project we would like the chatbot to be more sophisticated as the bot knows the knowledge level of user and give the answer based on his/her knowledge and understanding level basically would like to improve the results of the chatbot output.
+
+# References
+* For Q&A we have used :- https://github.com/allenai/bi-att-flow
