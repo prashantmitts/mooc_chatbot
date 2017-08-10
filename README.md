@@ -26,7 +26,7 @@ https://youtube.com/blah-blah
   redis-server & ; python manage.py runserver
 ```
 Now visit :- http://localhost:8000
-We have fed the database with a few topics related to astronomy. Navigate to the search bar and type in a query(example : '') and hit search ! You should now be looking at a new page with search results and a Chatbot window on the side
+We have fed the database with a few topics related to astronomy. Navigate to the search bar and type in a query(example : '') and hit search ! You should now be looking at a new page with search results from which you can select the correct result. This will open a new page with the content and a Chatbot window on the side
 ### Misc.
 ---
 ###### If at some point you need to remove redis cache
