@@ -41,3 +41,7 @@ We developed a very simple version of chatbot to demonstrate our idea by using o
 # References
 ---
 * For Q&A we have used :- https://github.com/allenai/bi-att-flow
+
+
+
+``` This Repo was for sole purpose of opened.ai hackathon we have been honourable mentioned for best use of pre-trained ML model :)``` 
