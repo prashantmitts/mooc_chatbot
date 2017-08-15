@@ -1,3 +1,5 @@
+``` This Repo was for sole purpose of opened.ai hackathon we have been honourable mentioned for best use of pre-trained ML model :)``` 
+
 # Chatbot for MOOCs (Massive Open Online Courses)
 This is a demo project on applications of Artificial Intelligence in area of education. <br> 
 These Days MOOCs are in large demand as they offer many positives such as <i>affordability</i> (most of them are free), <i>variety</i>, <i>pursue advanced courses</i> and <i>timing flexibility</i> but they are not quite successful as many people start the course but course ends up with very less percent of people who are able to complete the course. We beleive there is a room for lot of improvements in them. We have tried to focus one of them which is handling user doubts, individuals can ask their difficulties in forums but they are not effective as they have to wait for getting replies from instructors which halts the learning process as in real classroom environment one can ask his/her difficulty in classrom itself. In order to face this challenge we have created a chatbot which is available to interact with the user while the course video is playing and the user can ask a query to the bot which can assist the student.
@@ -41,7 +43,3 @@ We developed a very simple version of chatbot to demonstrate our idea by using o
 # References
 ---
 * For Q&A we have used :- https://github.com/allenai/bi-att-flow
-
-
-
-``` This Repo was for sole purpose of opened.ai hackathon we have been honourable mentioned for best use of pre-trained ML model :)``` 
